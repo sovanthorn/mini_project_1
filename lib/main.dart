@@ -6,6 +6,7 @@ import 'package:mini_project/screens/sign_in_screen.dart';
 import 'package:mini_project/widget/blog_card.dart';
 import 'package:mini_project/widget/blog_details.dart';
 import '../article/model.dart';
+import 'package:mini_project/screens/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Homepage(),
+      home: SplashScreen(),
     );
   }
 }
