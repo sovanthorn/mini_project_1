@@ -86,12 +86,28 @@ class BlogDetailsPage extends StatelessWidget {
                   Text('${article.numberOfLikes} Likes'),
                   const SizedBox(width: 20),
                   IconButton(
-                    icon: const Icon(Icons.bookmark, color: Colors.blue),
+                    icon: const Icon(Icons.bookmark, color: Colors.black),
                     onPressed: () {
                       print('Bookmarked!');
                     },
                   ),
                   Text('${article.numberOfBookmarks} Bookmarks'),
+                ],
+              ),
+              const Spacer(), // Pushes share icon to the right
+              // Share icon in its own position
+              Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.share_outlined, color: Colors.black),
+                    onPressed: () {
+                      print('Share icon pressed');
+                    },
+                  ),
+                  Text(
+                    '${article.numberOfBookmarks}', // Assuming you want bookmarks count here, adjust if needed
+                    style: const TextStyle(color: Colors.black), // Changed to black for visibility
+                  ),
                 ],
               ),
             ],
